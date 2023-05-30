@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Caesar Cipher</title>
+  <script defer src="caesarCipher.js"></script>
+</head>
+
+<body>
+  <form name="caeserForm" id="ceaserForm">
+    <label for="userMessage=">Enter Message:</label><br />
+    <textarea id="userMessage" rows="4" cols="50" oninput="enDeCode()"></textarea>
+    <br /> <br />
+    <label for="encode">Encode:</label>
+    <input type="radio" name="code" id="encode" checked onchange="enDeCode()" />
+    <label for="decode">Decode:</label>
+    <input type="radio" name="code" id="decode" onchange="enDeCode()" />
+    <br /> <br />
+    <label for="userKey">Key:</label>
+    <input type="number" min="0" max="26" id="userKey" value="1" onchange="enDeCode()" />
+    <br /> <br />
+    <label for="output">Output:</label><br />
+    <textarea id="output" rows="4" cols="50"></textarea>
+
+  </form>
+</body>
+
+</html>
