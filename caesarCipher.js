@@ -77,7 +77,7 @@ const enDeCode = function () {
       }
 
       let index = alphabet.indexOf(letter);
-      let newIndex = index - userKey;
+      let newIndex = index - userKey - shiftAmount;
       let newLetter = alphabet[newIndex];
 
       // If new index is less than 0, add 26 to get new index (to loop over alphabet)
@@ -88,6 +88,8 @@ const enDeCode = function () {
 
       // Push new letter to encoded array
       decodedArray.push(newLetter);
+
+      shiftAmount += userShift;
 
     });
 
